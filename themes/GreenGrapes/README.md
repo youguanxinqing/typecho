@@ -1,6 +1,6 @@
 # GreenGrapes
 
-分支`guan`为我基于原主题基础上，根据自己的喜好做的一些修改。这里感谢作者**hongweipeng**。
+根据自己的喜好做的一些修改。这里感谢原作者**hongweipeng**。
 
 现用于我的博客[有关心情](http://youguanxinqing.xyz)
 
