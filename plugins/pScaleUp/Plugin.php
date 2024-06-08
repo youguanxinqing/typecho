@@ -97,26 +97,27 @@ class pScaleUp_Plugin implements Typecho_Plugin_Interface
 	}
 </style>
 <script>
-	document.addEventListener('DOMContentLoaded', function(){
-		let imgs = document.querySelectorAll('img');
+    document.addEventListener('DOMContentLoaded', function(){
+        let imgs = document.querySelectorAll('img');
         imgs.forEach((item) => {
             let imgUrl = item.getAttribute("src");
             let imgAlt = item.getAttribute("alt");
 
             let aTag = document.createElement("a");
             aTag.setAttribute("href", imgUrl);
-            
+
             let parentDom = item.parentNode;
             parentDom.replaceChild(aTag, item);
             aTag.appendChild(item);
 
             if (imgAlt && imgAlt.startsWith("show-")) {
                 let figcaptionTag = document.createElement("figcaption");
-                figcaption.innerText = imgAlt.replace("show-", "");
+                figcaptionTag.setAttribute("style", "color:#999999; font-size:0.9rem");
+                figcaptionTag.innerText = imgAlt.replace("show-", "");
                 parentDom.appendChild(figcaptionTag);
             }
         });
-	});
+    });
 </script>
 EOL;
         $size = Typecho_Widget::widget('Widget_Options')->plugin('pScaleUp')->size;
